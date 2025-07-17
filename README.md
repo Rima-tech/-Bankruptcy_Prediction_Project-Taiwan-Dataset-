@@ -28,10 +28,14 @@ This project analyzes a Taiwanese bankruptcy dataset to build a reliable binary 
 * Correlation heatmaps (Fig 1–4) were used within each group to detect highly correlated features.
 ![corr_heatmap_1
 
-<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/c716a78688132bd49b079e72d503c91bd16e1445/Images/bankrupt_cls_.png" alt=" corr_heatmap_1" width="800" height="800">
-![corr_heatmap_2]()
-![corr_heatmap_3]()
-![corr_heatmap_4]()
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/089050848642212fdfcca1249bf854a141b6f5de/Images/prof_corr.png" alt=" corr_heatmap_1" width="900" height="900">
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/089050848642212fdfcca1249bf854a141b6f5de/Images/corr_2.png" alt="corr_2" width="900" height="900">
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/089050848642212fdfcca1249bf854a141b6f5de/Images/corr_3.png" alt="corr_3" width="900" height="900">
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/089050848642212fdfcca1249bf854a141b6f5de/Images/corr_4.png" alt="corr_4" width="900" height="900">
+
 
 * Columns with extreme outliers were capped at the 99th percentile to reduce skewness.
 
@@ -46,7 +50,8 @@ After finalizing the feature set, four machine learning models were trained usin
 3.	k-Nearest Neighbors (kNN) enhanced with SMOTE to address severe class imbalance
 4.	XGBoost, enhanced with SMOTE to address severe class imbalance<br>
 The target variable "Bankrupt" is highly skewed, with bankrupt cases forming a small minority. Therefore, models were evaluated not just on accuracy, but on Precision, Recall, and F1-Score, which better reflect performance on the minority class (i.e., bankrupt companies).
-![comparison_table]()
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/a3b03dfa68b11032ab8f1a1325ddc3a64c983440/Images/comparison_tab.png" alt="comparision_table " width="400" height="400">
 
 ## Interpretation for Business Stakeholders:
 •	XGBoost (with SMOTE) delivered the best balance between detecting bankrupt companies (Recall) and avoiding false positives (Precision).
@@ -64,17 +69,31 @@ In risk management, missing a potential bankruptcy can be far costlier than flag
 5. Operating Profit / Paid-in Capital
 6. Quick Ratio
 7. Cash Turnover Rate
-![imp_tab1]()
-![imp_tab1]()
-![imp_tab1]()
-![imp_tab1]()
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/a3b03dfa68b11032ab8f1a1325ddc3a64c983440/Images/DT_imp_f.png" alt="DT_imp" width="800" height="800">
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/a3b03dfa68b11032ab8f1a1325ddc3a64c983440/Images/RF_imp_f.png" alt="RF_imp" width="800" height="800">
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/a3b03dfa68b11032ab8f1a1325ddc3a64c983440/Images/XGB_imp_f.png" alt="XGB_imp" width="800" height="800">
 
 ## Business Implications
-The model enables early detection of bankruptcy risk, supporting proactive measures like credit limit adjustments, investment re-evaluation, or risk mitigation.
+1. Banks & Financial Institutions<br>
+Use: Loan risk assessment<br>
+* How it helps: Traditional credit checks may miss deeper financial issues. This model can spot hidden risks like poor profitability or high debt—even if surface numbers look good.
+Benefit: Fewer bad loans (NPAs), better loan quality, and easier compliance.
 
-XGBoost’s high recall ensures most risky firms are flagged, reducing potential financial loss.
+2. Investors & Private Equity<br>
+Use: Monitoring portfolio companies<br>
+* How it helps: Manually checking financial health for hundreds of firms is tough. This model highlights early warning signs like unstable earnings or weak liquidity.
+Benefit: Smarter investment calls, timely exits, and higher confidence.
 
-Financial institutions and analysts can use this model to automate risk scoring using firm-level financial ratios.
+3. B2B Vendors & Suppliers<br>
+Use: Setting credit terms for customers<br>
+* How it helps: Avoid giving credit to firms likely to default. The model flags risky buyers so vendors can shorten credit periods or demand upfront payment.
+Benefit: Protects cash flow and keeps supply chains healthy.
 
-The 35 selected features are interpretable and rooted in domain knowledge, making the insights actionable and explainable for decision-makers.
+4. Finance Teams (Large Companies)<br>
+Use: Tracking partners or internal units<br>
+* How it helps: Finance teams can use this model to watch subsidiaries or partners showing financial stress—like low cash flow or rising debt.
+Benefit: Acts early to avoid losses or brand damage.
+
+## Conclusion
+This project demonstrates how financial ratio analysis combined with machine learning can effectively predict bankruptcy risk. By narrowing down to 35 key features and testing multiple models, XGBoost emerged as the most reliable predictor. The model's interpretability and accuracy make it a valuable decision-support tool for various stakeholders in finance, investment, and operations.
 
