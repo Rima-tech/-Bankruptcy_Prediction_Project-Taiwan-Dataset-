@@ -20,11 +20,15 @@ This project analyzes a Taiwanese bankruptcy dataset to build a reliable binary 
 * An initial irrelevant column was dropped.<br>
 
 * The target variable ('Bankrupt?') was highly imbalanced, with very few bankrupt cases.<br>
-![bankrupt_ class_distribution]()
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/c716a78688132bd49b079e72d503c91bd16e1445/Images/bankrupt_cls_.png" alt=" bankruptcey_class_dist" width="400" height="400">
+
 * Features were grouped into five logical categories: Profitability, Liquidity, Leverage, Efficiency, and Miscellaneous.
 
 * Correlation heatmaps (Fig 1–4) were used within each group to detect highly correlated features.
-![corr_heatmap_1]()
+![corr_heatmap_1
+
+<img src="https://github.com/Rima-tech/-Bankruptcy_Prediction_Project-Taiwan-Dataset-/blob/c716a78688132bd49b079e72d503c91bd16e1445/Images/bankrupt_cls_.png" alt=" corr_heatmap_1" width="800" height="800">
 ![corr_heatmap_2]()
 ![corr_heatmap_3]()
 ![corr_heatmap_4]()
